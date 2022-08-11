@@ -1,33 +1,29 @@
-HTML alone can't do this you need some other language in backend to check password. Or you can use javascript which will verify password in frontend but you have to specify password in the code itself only if you are doing it for fun. Otherwise for developing web app with login page you need a backend language such as php or python and database such as mysql or mariadb to store passwords.
+<!DOCTYPE html>
+<html lang="en">
 
-Sample code
-You need to create two files one for your login form (login.html) and another to redirect after right password is entered (welcome.html).
-
-This code is for login.html
-
-    <!DOCTYPE html>
-<html>
 <head>
-    <title>Login page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="login-page.css">
+  <script defer src="login-page.js"></script>
 </head>
+
 <body>
-<form>
-    <label for="pswd">Enter your password: </label>
-    <input type="password" id="pswd">
-    <input type="button" value="Submit" onclick="checkPswd();" />
-</form>
-<!--Function to check password the already set password is admin-->
-<script type="text/javascript">
-    function checkPswd() {
-        var confirmPassword = "admin";
-        var password = document.getElementById("pswd").value;
-        if (password == confirmPassword) {
-             window.location="welcome.html";
-        }
-        else{
-            alert("Passwords do not match.");
-        }
-    }
-</script>
+  <main id="main-holder">
+    <h1 id="login-header">Login</h1>
+    
+    <div id="login-error-msg-holder">
+      <p id="login-error-msg">Invalid username <span id="error-msg-second-line">and/or password</span></p>
+    </div>
+    
+    <form id="login-form">
+      <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Username">
+      <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Password">
+      <input type="submit" value="Login" id="login-form-submit">
+    </form>
+  
+  </main>
 </body>
+
 </html>

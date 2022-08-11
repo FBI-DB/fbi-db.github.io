@@ -9,7 +9,7 @@ loginButton.addEventListener("click", (e) => {
 
     if (username === "FBI" && password === "275871") {
         alert("You have successfully logged in.");
-        window.location.replace("http://googl1.harlenmtcsw.repl.co/neon.html")
+        window.location.replace("/options")
     } else {
         loginErrorMsg.style.opacity = 1;
     }

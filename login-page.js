@@ -7,7 +7,7 @@ loginButton.addEventListener("click", (e) => {
     const username = loginForm.username.value;
     const password = loginForm.password.value;
 
-    if (username === "aiaiadmin" && password === "aiai001") {
+    if (username === "FBI" && password === "275871") {
         alert("You have successfully logged in.");
         window.location.replace("http://googl1.harlenmtcsw.repl.co/neon.html")
     } else {
